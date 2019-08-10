@@ -7,6 +7,7 @@ import { StoreModule } from './store/store.module';
 import { HttpClientModule } from '@angular/common/http';
 import { Cart } from './model/cart';
 import { StoreComponent } from './store/store.component';
+import { ProductDetailComponent } from './store/product-detail/product-detail.component';
 
 
 
@@ -21,6 +22,7 @@ import { StoreComponent } from './store/store.component';
     AppRoutingModule,
     StoreModule,
     HttpClientModule,
+   
     
   ],
   

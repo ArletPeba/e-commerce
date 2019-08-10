@@ -15,8 +15,7 @@ export class ProductDetailComponent implements OnInit {
 
   p$:Observable<Product>;
 
-  constructor(private router: Router, private route: ActivatedRoute,
-  public product: ProductRepositoryService){
+  constructor(private product: ProductRepositoryService, private route: ActivatedRoute, private router: Router){
 
   
   }

@@ -1,17 +1,27 @@
 <app-nav></app-nav>
-<div class="container" *ngIf="p$ async as product">
-  <br>
+<div class="container card" *ngIf="p$ | async as product" style="border-block-color:black; padding-top: 10px; margin-top: 30px">
   <div class="row">
-    <div class="col-lg-6"> 
-      <img>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <p>Imagen No Disponible</p>
     </div>
-    <div class="col-lg-6">
-      <div class="col-lg-6">
-        <h1>{{product.productName}}</h1>
-        <p>{{product.productDescription}}</p>
-        <h3>{{product.MSRP }}</h3>
-      </div>>
+    <div class="col-md-4">
+      <h2>{{product.productName}}</h2>
+      <p>{{product.productDescription}}</p>
+      <h3>{{product.MSRP | currency }}</h3>
     </div>
+    <br>
   </div>
+  <div class="row">
+    <div class="col-md-6">
+    
+    </div>
+    <div class="col-md-6">
+        <button type="button" class="btn btn-success">
+            Add to Car
+          </button>
+    </div>
+  </div> 
+  <div class="col-md-2"></div>
 </div>
-
