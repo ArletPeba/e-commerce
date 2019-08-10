@@ -1,0 +1,44 @@
+<nav class="navbar h6 p-3 navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+     <h4 style="color:white">Detalle de Compra</h4>
+    </div>
+  </nav>
+<div style="justify-content: center; margin-top: 50px">
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">PriceUnit</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Subtotal</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of linesDetailAll; let index = index">
+      <th>{{l.product.productName}}</th>
+      <td>{{l.product.MSRP}}</td>
+      <td>
+  
+    <input (change)="update(l.product,$event.target.value)" type="number" value="{{l.quantity}}" min="1" max="9" step="1"/> 
+      </td>
+      <td>{{l.lineTotal}}</td>
+      <button type="button" class="close" aria-label="Close" (click)="deleteLine(index)">
+        <i class="fas fa-trash"></i> 
+      </button>
+    </tr>
+    <td></td>
+    <td></td>
+    <th scope="row">Total</th>
+    <td>{{cart.cartPrice}}</td>
+    <td></td>
+    <tr>
+
+    </tr>
+  </tbody>
+</table>
+</div> 
+</div>
+
+

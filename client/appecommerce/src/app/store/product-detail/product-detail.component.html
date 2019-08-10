@@ -1,0 +1,17 @@
+<app-nav></app-nav>
+<div class="container" *ngIf="p$ async as product">
+  <br>
+  <div class="row">
+    <div class="col-lg-6"> 
+      <img>
+    </div>
+    <div class="col-lg-6">
+      <div class="col-lg-6">
+        <h1>{{product.productName}}</h1>
+        <p>{{product.productDescription}}</p>
+        <h3>{{product.MSRP }}</h3>
+      </div>>
+    </div>
+  </div>
+</div>
+
